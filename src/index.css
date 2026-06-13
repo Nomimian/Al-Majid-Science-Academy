@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0F1F5C;
+  background: #fff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+.arabic { font-family: 'Amiri', serif; direction: rtl; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #091440; }
+::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 3px; }
+::selection { background: #D4A017; color: #091440; }
+
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.animate-ping-slow { animation: ping 2s ease-out infinite; }
