@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logoBlue from '../assets/logo-blue.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -22,7 +23,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Active section tracking
   useEffect(() => {
     const sections = navLinks.map(l => l.href.replace('#', ''));
     const observer = new IntersectionObserver(
@@ -47,13 +47,16 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between transition-all duration-400
-          ${scrolled ? 'py-2.5 px-[5%] bg-[rgba(9,20,64,0.96)] backdrop-blur-xl border-b border-[rgba(212,160,23,0.25)]' : 'py-[18px] px-[5%] bg-transparent'}`}
+          ${scrolled ? 'py-2 px-[5%] bg-[rgba(9,20,64,0.96)] backdrop-blur-xl border-b border-[rgba(212,160,23,0.25)]' : 'py-3 px-[5%] bg-transparent'}`}
       >
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3 no-underline">
-          <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-[#D4A017] to-[#F0C842] text-[#091440] font-bold text-lg font-[Playfair_Display,serif]">
-            A
-          </div>
+          <img
+            src={logoBlue}
+            alt="Al-Majid Academy Logo"
+            className={`object-contain rounded-lg transition-all duration-400 ${scrolled ? 'w-10 h-10' : 'w-12 h-12'}`}
+            style={{ background: 'transparent' }}
+          />
           <div>
             <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-[18px] leading-[1.1]">Al-Majid</div>
             <div className="text-[#F8F6F0] font-light text-[11px] tracking-[3px] uppercase">Group of Schools</div>
@@ -116,6 +119,14 @@ export default function Navbar() {
               >
                 <FaTimes />
               </button>
+              {/* Logo in mobile menu */}
+              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-[rgba(212,160,23,0.2)]">
+                <img src={logoBlue} alt="Al-Majid Academy" className="w-10 h-10 object-contain rounded-lg" />
+                <div>
+                  <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-base">Al-Majid</div>
+                  <div className="text-[rgba(248,246,240,0.6)] text-[10px] tracking-[2px] uppercase">Group of Schools</div>
+                </div>
+              </div>
               {navLinks.map(link => (
                 <a
                   key={link.label}

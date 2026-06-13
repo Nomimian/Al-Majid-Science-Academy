@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp, FaPhone, FaEnvelope, FaHeart } from 'react-icons/fa';
+import logoWhite from '../assets/logo-white.png';
 
 const footerLinks = [
   {
@@ -43,20 +44,39 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-[#D4A017] to-[#F0C842] text-[#091440] font-bold text-lg font-[Playfair_Display,serif]">A</div>
+              <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center p-2">
+                <img
+                  src={logoWhite}
+                  alt="Al-Majid Academy Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
               <div>
-                <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-lg">Al-Majid</div>
-                <div className="text-[rgba(232,235,244,0.5)] text-[11px] tracking-[3px] uppercase">Group of Schools</div>
+                <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-lg">
+                  Al-Majid
+                </div>
+
+                <div className="text-[rgba(232,235,244,0.5)] text-[11px] tracking-[3px] uppercase">
+                  Group of Schools
+                </div>
               </div>
             </div>
+
             <p className="text-[rgba(232,235,244,0.55)] text-sm leading-[1.8] mb-6 max-w-[280px]">
               Nurturing excellence, building character, and illuminating the path to a brighter future — one student at a time.
             </p>
+
             <div className="flex gap-3">
               {socials.map(({ icon: Icon, href, color }, i) => (
-                <a key={i} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
+                <a
+                  key={i}
+                  href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center no-underline text-lg transition-all duration-300 hover:bg-white/15"
-                  style={{ color }}>
+                  style={{ color }}
+                >
                   <Icon />
                 </a>
               ))}
