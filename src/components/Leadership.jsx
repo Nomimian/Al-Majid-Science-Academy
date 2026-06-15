@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 
-import majidImg from '../assets/leaders/hamza.png';
+import majidImg from '../assets/leaders/majid.png';
 import hamzaImg from '../assets/leaders/hamza.png';
-import samanImg from '../assets/leaders/hamza.png';
-import sanaImg from '../assets/leaders/hamza.png';
+import samanImg from '../assets/leaders/saman.png';
+import sanaImg from '../assets/leaders/sana.png';
 
 const leaders = [
   {
