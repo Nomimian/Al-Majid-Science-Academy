@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import { FaChild, FaBookReader, FaFlask, FaLaptopCode, FaPalette, FaMosque } from 'react-icons/fa';
+import { FaChild, FaBookReader, FaFlask, FaLaptopCode, FaPalette, FaMosque, FaUniversity } from 'react-icons/fa';
 
 const programs = [
   { icon: FaChild, grade: 'Pre-Primary', ages: 'Ages 3–5', title: 'Early Childhood Program', desc: 'A nurturing environment where curiosity blossoms. Play-based learning, language foundations, and character development.', color: '#4A90D9' },
   { icon: FaBookReader, grade: 'Primary', ages: 'Grades 1–5', title: 'Primary School', desc: 'Core academics — Urdu, English, Mathematics, Science, and Islamic Studies — delivered by dedicated educators.', color: '#D4A017' },
-  { icon: FaFlask, grade: 'Middle School', ages: 'Grades 6–8', title: 'Middle Years Programme', desc: 'Deeper inquiry into sciences, humanities, and arts. Students develop critical thinking and research skills.', color: '#27AE60' },
-  { icon: FaLaptopCode, grade: 'Matriculation', ages: 'Grades 9–10', title: 'Science & Technology', desc: 'Board-aligned curriculum with hands-on STEM labs, computer science, and preparation for competitive exams.', color: '#8E44AD' },
+  { icon: FaFlask, grade: 'Middle School', ages: 'Grades 6–8', title: 'Middle Years Programme', desc: 'Deeper inquiry into sciences, humanities, and arts. Students develop critical thinking and research skills.', color: '#68a9b8' },
+  { icon: FaLaptopCode, grade: 'Matriculation', ages: 'Grades 9–10', title: 'Science & Technology', desc: 'Board-aligned curriculum with hands-on STEM labs, computer science, and preparation for competitive exams.', color: '#ed46addc' },
+  { icon: FaUniversity, grade: 'Intermediate', ages: 'Grades 11–12', title: 'Intermediate Programme', desc: 'Pre, ICS, and Arts streams with expert faculty, extensive resources, and full board exam preparation for FSc, FA & ICS.', color: '#a8bb40' },
   { icon: FaPalette, grade: 'Co-Curricular', ages: 'All Grades', title: 'Arts & Activities', desc: 'Debate, drama, art, calligraphy, and sports programmes that round out every student\'s profile.', color: '#E67E22' },
-  { icon: FaMosque, grade: 'Islamic Studies', ages: 'All Grades', title: 'Quran & Moral Studies', desc: 'Tajweed, Tafseer, Islamic history, and ethics — taught with wisdom and love to build righteous character.', color: '#1B2A6B' },
+  { icon: FaMosque, grade: 'Islamic Studies', ages: 'All Grades', title: 'Quran & Moral Studies', desc: 'Tajweed, Tafseer, Islamic history, and ethics — taught with wisdom and love to build righteous character.', color: '#3bd779' },
 ];
 
 export default function Programs() {
@@ -31,7 +32,7 @@ export default function Programs() {
           </div>
           <h2 className="text-white mb-4" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>Academic Programs</h2>
           <p className="text-[rgba(232,235,244,0.65)] text-base md:text-lg max-w-[560px] mx-auto">
-            From early childhood to matriculation, every programme is designed for deep learning and lasting impact.
+            From early childhood to intermediate, every programme is designed for deep learning and lasting impact.
           </p>
         </motion.div>
 
@@ -40,19 +41,18 @@ export default function Programs() {
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: i * 0.1 }}
+              transition={{ duration: 0.7, delay: i * 0.08 }}
               whileHover={{ y: -8 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-7 md:p-8 backdrop-blur-md transition-all duration-300 cursor-default relative overflow-hidden"
+              className="bg-white/5 border border-white/10 rounded-2xl p-7 md:p-8 backdrop-blur-md transition-all duration-300 cursor-default relative overflow-hidden flex flex-col"
             >
-              {/* Top accent */}
               <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: `linear-gradient(90deg, ${prog.color}, transparent)` }} />
 
               <div className="flex items-start gap-4 mb-5">
-                <div className="w-13 h-13 rounded-[14px] bg-white/10 flex items-center justify-center shrink-0 w-[52px] h-[52px]">
-                  <prog.icon style={{ color: prog.color === '#D4A017' ? '#D4A017' : '#FFFFFF', fontSize: 22 }} />
+                <div className="w-[52px] h-[52px] rounded-[14px] bg-white/10 flex items-center justify-center shrink-0">
+                  <prog.icon style={{ color: prog.color, fontSize: 22 }} />
                 </div>
                 <div>
-                  <div className="inline-block bg-white/15 text-white/80 text-[10px] font-bold tracking-[2px] uppercase px-2.5 py-0.5 rounded-full mb-1"
+                  <div className="inline-block text-[10px] font-bold tracking-[2px] uppercase px-2.5 py-0.5 rounded-full mb-1"
                     style={{ background: `${prog.color}25`, color: prog.color }}>
                     {prog.grade}
                   </div>
@@ -61,7 +61,7 @@ export default function Programs() {
               </div>
 
               <h3 className="text-white font-[Playfair_Display,serif] text-xl mb-3">{prog.title}</h3>
-              <p className="text-[rgba(232,235,244,0.6)] text-sm leading-[1.8]">{prog.desc}</p>
+              <p className="text-[rgba(232,235,244,0.6)] text-sm leading-[1.8] flex-1">{prog.desc}</p>
             </motion.div>
           ))}
         </div>

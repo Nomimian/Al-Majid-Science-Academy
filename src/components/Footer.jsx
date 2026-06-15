@@ -16,7 +16,7 @@ const footerLinks = [
     links: [
       { label: 'Pre-Primary', href: '#programs' }, { label: 'Primary School', href: '#programs' },
       { label: 'Middle School', href: '#programs' }, { label: 'Matriculation', href: '#programs' },
-      { label: 'Islamic Studies', href: '#programs' },
+      { label: 'Intermediate', href: '#programs' }, { label: 'Islamic Studies', href: '#programs' },
     ],
   },
   {
@@ -44,39 +44,25 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center p-2">
-                <img
-                  src={logoWhite}
-                  alt="Al-Majid Academy Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
+              <img
+                src={logoWhite}
+                alt="AL-Majid Academy Logo"
+                className="w-12 h-12 object-contain rounded-lg"
+                
+              />
               <div>
-                <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-lg">
-                  Al-Majid
-                </div>
-
-                <div className="text-[rgba(232,235,244,0.5)] text-[11px] tracking-[3px] uppercase">
-                  Group of Schools
-                </div>
+                <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-lg">AL-Majid</div>
+                <div className="text-[rgba(232,235,244,0.5)] text-[11px] tracking-[3px] uppercase">Group of Academies</div>
               </div>
             </div>
-
             <p className="text-[rgba(232,235,244,0.55)] text-sm leading-[1.8] mb-6 max-w-[280px]">
               Nurturing excellence, building character, and illuminating the path to a brighter future — one student at a time.
             </p>
-
             <div className="flex gap-3">
               {socials.map(({ icon: Icon, href, color }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
-                  rel="noopener noreferrer"
+                <a key={i} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center no-underline text-lg transition-all duration-300 hover:bg-white/15"
-                  style={{ color }}
-                >
+                  style={{ color }}>
                   <Icon />
                 </a>
               ))}
@@ -104,7 +90,7 @@ export default function Footer() {
       <div className="border-t border-white/[0.07] px-[5%] py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-3">
           <span className="text-[rgba(232,235,244,0.35)] text-[13px]">
-            © {new Date().getFullYear()} Al-Majid Group of Schools & Academy. All rights reserved.
+            © {new Date().getFullYear()} AL-Majid Group of Academies. All rights reserved.
           </span>
           <span className="text-[rgba(232,235,244,0.3)] text-[13px] flex items-center gap-1.5">
             Made with <FaHeart className="text-[#D4A017] text-[11px]" /> in Lahore, Pakistan

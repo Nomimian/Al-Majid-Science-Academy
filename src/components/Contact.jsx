@@ -11,7 +11,7 @@ export default function Contact() {
 
   const handleWhatsApp = () => {
     const msg = encodeURIComponent(
-      `Assalamu Alaikum! My name is ${form.name || '[Your Name]'}. ${form.message || 'I am interested in enrolling at Al-Majid Academy.'}`
+      `Assalamu Alaikum! My name is ${form.name || '[Your Name]'}. ${form.message || 'I am interested in enrolling at AL-Majid Academy.'}`
     );
     window.open(`https://wa.me/923325050343?text=${msg}`, '_blank');
   };

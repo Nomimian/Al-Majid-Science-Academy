@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logoBlue from '../assets/logo-blue.png';
+import logoWhite from '../assets/logo-white.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -52,14 +52,14 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3 no-underline">
           <img
-            src={logoBlue}
-            alt="Al-Majid Academy Logo"
+            src={logoWhite}
+            alt="AL-Majid Academy Logo"
             className={`object-contain rounded-lg transition-all duration-400 ${scrolled ? 'w-10 h-10' : 'w-12 h-12'}`}
             style={{ background: 'transparent' }}
           />
           <div>
-            <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-[18px] leading-[1.1]">Al-Majid</div>
-            <div className="text-[#F8F6F0] font-light text-[11px] tracking-[3px] uppercase">Group of Schools</div>
+            <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-[18px] leading-[1.1]">AL-Majid</div>
+            <div className="text-[#F8F6F0] font-light text-[11px] tracking-[3px] uppercase">Group of Academies</div>
           </div>
         </a>
 
@@ -121,10 +121,10 @@ export default function Navbar() {
               </button>
               {/* Logo in mobile menu */}
               <div className="flex items-center gap-3 mb-4 pb-4 border-b border-[rgba(212,160,23,0.2)]">
-                <img src={logoBlue} alt="Al-Majid Academy" className="w-10 h-10 object-contain rounded-lg" />
+                <img src={logoWhite} alt="AL-Majid Academy" className="w-10 h-10 object-contain rounded-lg" />
                 <div>
-                  <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-base">Al-Majid</div>
-                  <div className="text-[rgba(248,246,240,0.6)] text-[10px] tracking-[2px] uppercase">Group of Schools</div>
+                  <div className="font-[Playfair_Display,serif] text-[#D4A017] font-bold text-base">AL-Majid</div>
+                  <div className="text-[rgba(248,246,240,0.6)] text-[10px] tracking-[2px] uppercase">Group of Academies</div>
                 </div>
               </div>
               {navLinks.map(link => (

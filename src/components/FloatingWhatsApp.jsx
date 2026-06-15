@@ -18,7 +18,7 @@ export default function FloatingWhatsApp() {
             <div className="flex items-center gap-2.5 mb-3">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0F1F5C] to-[#1B2A6B] flex items-center justify-center text-[#D4A017] font-bold font-[Playfair_Display,serif] text-lg">A</div>
               <div>
-                <div className="font-bold text-[#0F1F5C] text-sm">Al-Majid Academy</div>
+                <div className="font-bold text-[#0F1F5C] text-sm">AL-Majid Academy</div>
                 <div className="text-[#25D366] text-[11px] flex items-center gap-1">
                   <span className="w-1.5 h-1.5 bg-[#25D366] rounded-full inline-block" />
                   Online
@@ -29,7 +29,7 @@ export default function FloatingWhatsApp() {
               Assalamu Alaikum! 👋 How can we help you? Tap below to chat about admissions or any query.
             </p>
             <a
-              href="https://wa.me/923325050343?text=Assalamu%20Alaikum!%20I%20am%20interested%20in%20Al-Majid%20Academy."
+              href="https://wa.me/923325050343?text=Assalamu%20Alaikum!%20I%20am%20interested%20in%20AL-Majid%20Academy."
               target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl no-underline font-bold text-sm hover:bg-[#20B955] transition-colors duration-200"
             >

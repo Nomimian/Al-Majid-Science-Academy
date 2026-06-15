@@ -13,7 +13,7 @@ const values = [
 const levels = [
   { label: 'Primary School', sub: 'Foundation Years' },
   { label: 'Middle School', sub: 'Guided Growth' },
-  { label: 'Higher Studies', sub: 'College Prep' },
+  { label: 'Intermediate', sub: 'College & Board' },
 ];
 
 export default function About() {
@@ -41,10 +41,10 @@ export default function About() {
             </h2>
 
             <p className="text-[#3A4875] text-base leading-[1.9] mb-4">
-              Al-Majid Group of Schools was founded with a singular vision: to create an institution where every child is seen, heard, and empowered. We believe that education is not merely the transfer of information — it is the transformation of a human being.
+              AL-Majid Group of Academies was founded with a singular vision: to create an institution where every child is seen, heard, and empowered. We believe that education is not merely the transfer of information — it is the transformation of a human being.
             </p>
             <p className="text-[#3A4875] text-base leading-[1.9] mb-9">
-              Rooted in Islamic values and guided by modern pedagogical excellence, Al-Majid Academy stands as a beacon for families who want the very best for their children — academically, spiritually, and socially.
+              Rooted in Islamic values and guided by modern pedagogical excellence, AL-Majid Academy stands as a beacon for families who want the very best for their children — academically, spiritually, and socially.
             </p>
 
             <div className="flex gap-4 flex-wrap">

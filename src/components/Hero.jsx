@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
-import logoBlue from '../assets/logo-blue.png';
+import logoWhite from '../assets/logo-white.png';
 
 const slides = [
   {
@@ -44,7 +44,7 @@ const slides = [
     id: 3,
     badge: 'Admissions Open 2025–26',
     headline: ['Begin Your', 'Child\'s', 'Journey'],
-    sub: 'Limited seats available. Join the Al-Majid family and give your child the gift of a holistic, values-driven education in Lahore.',
+    sub: 'Limited seats available. Join the AL-Majid family and give your child the gift of a holistic, values-driven education in Lahore.',
     cta1: { label: 'Apply Now', href: '#contact' },
     cta2: { label: 'Learn More', href: '#about' },
     accent: '#F0C842',
@@ -243,7 +243,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="flex flex-col items-center gap-2 mb-6"
             >
-              <img src={logoBlue} alt="Al-Majid Academy" className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-xl shadow-[0_8px_32px_rgba(212,160,23,0.35)]" />
+              <img src={logoWhite} alt="AL-Majid Academy" className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-xl shadow-[0_8px_32px_rgba(212,160,23,0.35)]" />
               <div className="arabic text-[#D4A017] text-base md:text-lg tracking-widest opacity-80">الماجد اکیڈمی</div>
             </motion.div>
 

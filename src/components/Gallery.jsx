@@ -45,7 +45,7 @@ export default function Gallery() {
             <span className="text-[#D4A017] text-[12px] font-bold tracking-[3px] uppercase">Campus Life</span>
             <div className="w-10 h-px bg-[#D4A017]" />
           </div>
-          <h2 className="text-white mb-4" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>Life at Al-Majid</h2>
+          <h2 className="text-white mb-4" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>Life at AL-Majid</h2>
           <p className="text-[rgba(232,235,244,0.6)] text-base md:text-lg max-w-[500px] mx-auto">
             A glimpse into the vibrant, enriching environment we've built for our students.
           </p>

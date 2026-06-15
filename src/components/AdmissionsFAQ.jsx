@@ -33,7 +33,7 @@ export default function AdmissionsFAQ() {
             <em className="text-[#D4A017]">Questions</em>
           </h2>
           <p className="text-[#6B7BAD] text-base md:text-lg max-w-[480px] mx-auto">
-            Everything you need to know before joining the Al-Majid family.
+            Everything you need to know before joining the AL-Majid family.
           </p>
         </motion.div>
 
