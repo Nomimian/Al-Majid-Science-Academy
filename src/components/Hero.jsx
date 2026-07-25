@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronDown, FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
-import logoWhite from '../assets/logo-white.png';
+import logoWhite from '../assets/logo-white.jpeg';
 
 const slides = [
   {

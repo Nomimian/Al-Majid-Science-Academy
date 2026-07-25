@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaWhatsapp, FaPhone, FaEnvelope, FaHeart } from 'react-icons/fa';
-import logoWhite from '../assets/logo-white.png';
+import logoWhite from '../assets/logo-white.jpeg';
 
 const footerLinks = [
   {

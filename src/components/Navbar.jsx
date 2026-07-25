@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logoWhite from '../assets/logo-white.png';
+import logoWhite from '../assets/logo-white.jpeg';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Programs', href: '#programs' },
   { label: 'Leadership', href: '#leadership' },
+  { label: 'Prospectus', href: '#vision' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
 ];

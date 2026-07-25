@@ -6,6 +6,7 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Leadership from './components/Leadership';
 import Testimonials from './components/Testimonials';
+import Prospectus from './components/Prospectus';
 import AdmissionsFAQ from './components/AdmissionsFAQ';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
@@ -20,6 +21,7 @@ function HomePage() {
       <About />
       <Programs />
       <Leadership />
+      <Prospectus />
       <Testimonials />
       <AdmissionsFAQ />
       <Gallery />
