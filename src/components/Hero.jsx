@@ -225,7 +225,7 @@ export default function Hero() {
       <div className="absolute -left-[10%] bottom-[5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(212,160,23,0.05)_0%,transparent_70%)] pointer-events-none z-[1]" />
 
       {/* Main slide content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-10 pt-28 pb-52 md:pb-56">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-10 pt-28 pb-52 md:pb-56 flex items-center justify-center" style={{ minHeight: '100vh' }}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={current}
@@ -235,7 +235,8 @@ export default function Hero() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col items-center text-center"
+            className="flex flex-col items-center text-center w-full"
+            style={{ minHeight: '540px' }}
           >
             {/* Logo + Arabic */}
             <motion.div
@@ -275,20 +276,25 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Quote (if any) */}
-            {slide.quote && (
-              <motion.div
-                initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.55 }}
-                className="flex items-start gap-3 bg-[rgba(212,160,23,0.08)] border-l-2 border-[#D4A017] rounded-r-xl px-5 py-3 mb-5 max-w-[540px] text-left"
-              >
-                <FaQuoteLeft className="text-[#D4A017] text-sm mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-[rgba(232,235,244,0.85)] text-sm italic leading-[1.7]">{slide.quote.text}</p>
-                  <p className="text-[#D4A017] text-[11px] font-semibold mt-1 tracking-wide">— {slide.quote.source}</p>
-                </div>
-              </motion.div>
-            )}
+            {/* Quote — always reserves space, hidden when no quote */}
+            <div className="w-full max-w-[540px] mb-5" style={{ minHeight: '72px' }}>
+              <AnimatePresence mode="wait">
+                {slide.quote && (
+                  <motion.div
+                    key="quote"
+                    initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5, delay: 0.55 }}
+                    className="flex items-start gap-3 bg-[rgba(212,160,23,0.08)] border-l-2 border-[#D4A017] rounded-r-xl px-5 py-3 text-left"
+                  >
+                    <FaQuoteLeft className="text-[#D4A017] text-sm mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-[rgba(232,235,244,0.85)] text-sm italic leading-[1.7]">{slide.quote.text}</p>
+                      <p className="text-[#D4A017] text-[11px] font-semibold mt-1 tracking-wide">— {slide.quote.source}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Sub text */}
             <motion.p
