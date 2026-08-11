@@ -47,10 +47,10 @@ export default function Navbar() {
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between transition-all duration-500
+        className={`group fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between transition-all duration-500
           ${scrolled
-            ? 'py-2 px-[5%] bg-white/5 backdrop-blur-2xl border-b border-[rgba(212,160,23,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.2)]'
-            : 'py-3 px-[5%] bg-transparent hover:bg-white/5 hover:backdrop-blur-2xl'}`}
+            ? 'py-2 px-[5%] bg-[#091440] border-b border-[rgba(212,160,23,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.35)]'
+            : 'py-3 px-[5%] bg-white/5 backdrop-blur-2xl border-b border-transparent hover:bg-[#091440] hover:backdrop-blur-0 hover:border-[rgba(212,160,23,0.2)] hover:shadow-[0_4px_30px_rgba(0,0,0,0.35)]'}`}
       >
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3 no-underline">
